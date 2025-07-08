@@ -19,7 +19,7 @@ const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; children: Re
 
 
 const App: React.FC = () => {
-  <Analytics />
+  
   const [isLoading, setIsLoading] = useState(false);
   const [isGeneratingIdea, setIsGeneratingIdea] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -207,6 +207,7 @@ const App: React.FC = () => {
         </a>
       </footer>
     </div>
+      <Analytics/>
   );
 };
 
