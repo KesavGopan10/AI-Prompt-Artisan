@@ -11,7 +11,6 @@ Transform your raw ideas from text, voice, or drawings into powerful, structured
 | 🔮 **Expert Enhancement** | Leverages the power of the Gemini API with advanced system instructions to apply prompt engineering best practices, crafting clear and effective prompts tailored for different use cases. |
 | 💡 **Creative Spark** | Stuck for an idea? Use the "Generate Idea" feature to get a random, creative prompt to kickstart your imagination. |
 | 💾 **Save & Reuse** | Build your personal library of powerful prompts. Save your favorites with one click, categorized by type, and easily copy them for later use. |
-| 🔒 **Secure & Private** | Your Gemini API key is encrypted with crypto-js and stored securely in your browser's local storage. It is never transmitted anywhere else. |
 
 ## 🤔 How It Works
 
