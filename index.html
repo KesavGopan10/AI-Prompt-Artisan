@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>AI Prompt Artisan - Enhance Your Creative Ideas</title>
+    <meta name="description" content="Transform your ideas from text, voice, or drawings into powerful, optimized prompts for any AI model. Features multi-language support and expert prompt engineering." />
+    <meta name="keywords" content="AI, prompt engineering, prompt generator, ChatGPT, DALL-E, Stable Diffusion, Gemini, AI prompts, art prompts, text to image" />
+    <meta name="author" content="AI Prompt Artisan" />
+    <link rel="canonical" href="https://prompt-artisan.example.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://prompt-artisan.example.com/" />
+    <meta property="og:title" content="AI Prompt Artisan - Enhance Your Creative Ideas" />
+    <meta property="og:description" content="Transform your ideas from text, voice, or drawings into powerful, optimized prompts for any AI model." />
+    <meta property="og:image" content="https://prompt-artisan.example.com/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://prompt-artisan.example.com/" />
+    <meta property="twitter:title" content="AI Prompt Artisan - Enhance Your Creative Ideas" />
+    <meta property="twitter:description" content="Transform your ideas from text, voice, or drawings into powerful, optimized prompts for any AI model." />
+    <meta property="twitter:image" content="https://prompt-artisan.example.com/twitter-image.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'brand-primary': '#c026d3', // fuchsia-600
+              'brand-secondary': '#a21caf', // fuchsia-700
+              'brand-accent': '#d946ef', // fuchsia-500
+              'base-100': '#111827', // gray-900
+              'base-200': '#1f2937', // gray-800
+              'base-300': '#374151', // gray-700
+              'text-primary': '#f9fafb', // gray-50
+              'text-secondary': '#9ca3af', // gray-400
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #111827; /* base-100 */
+        background-image: radial-gradient(at 27% 37%, hsla(215, 98%, 42%, 0.1) 0px, transparent 50%),
+                          radial-gradient(at 97% 21%, hsla(237, 97%, 60%, 0.1) 0px, transparent 50%),
+                          radial-gradient(at 82% 99%, hsla(295, 96%, 68%, 0.1) 0px, transparent 50%);
+      }
+
+      /* Aurora Text Effect */
+      @keyframes aurora-effect {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .text-aurora {
+        background: linear-gradient(90deg, #f9fafb, #9ca3af, #d946ef, #f9fafb);
+        background-size: 250% 250%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: aurora-effect 10s ease infinite;
+      }
+
+      /* Skeleton Loader Shimmer */
+      @keyframes shimmer {
+        100% { transform: translateX(100%); }
+      }
+      .shimmer-bg::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background-image: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0,
+          rgba(255, 255, 255, 0.05) 20%,
+          rgba(255, 255, 255, 0.2) 60%,
+          rgba(255, 255, 255, 0)
+        );
+        animation: shimmer 2s infinite;
+      }
+
+      /* Staggered Fade-in Animation */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .fade-in-item {
+        animation: fadeIn 0.5s ease-out forwards;
+        opacity: 0;
+      }
+      
+      /* Glow effect for cards */
+      .glow-on-hover:hover {
+        box-shadow: 0 0 15px 0px rgba(217, 70, 239, 0.3); /* brand-accent with opacity */
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.7.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="text-text-primary font-sans">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

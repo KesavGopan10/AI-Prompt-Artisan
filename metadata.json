@@ -1,0 +1,7 @@
+{
+  "name": "AI Prompt Artisan",
+  "description": "A user-friendly web application that transforms natural language inputs from text, voice, or drawings into structured, optimized AI prompts for various models.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
