@@ -196,7 +196,7 @@ const App: React.FC = () => {
       </main>
       <SettingsModal isOpen={settingsOpen} onClose={() => setSettingsOpen(false)} />
       <footer className="text-center p-6 mt-12 text-text-secondary text-sm border-t border-base-300/20">
-        <a href="" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-brand-accent transition-colors">
+        <a href="https://github.com/KesavGopan10/AI-Prompt-Artisan" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-brand-accent transition-colors">
           <GitHubIcon className="w-4 h-4" />
           <span>View Project on GitHub</span>
         </a>
