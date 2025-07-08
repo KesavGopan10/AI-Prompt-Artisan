@@ -6,7 +6,7 @@ import { EnhancedPrompts, FavoritePrompt } from './types';
 import { enhancePrompt, describeImage, generateCreativeIdea, getStoredApiKey } from './services/geminiService';
 import { WandIcon, SparklesIcon, GlobeIcon, LayersIcon, SaveIcon, GitHubIcon, SettingsIcon } from './components/icons';
 import SettingsModal from './components/SettingsModal';
-
+import { Analytics } from "@vercel/analytics/react"
 const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; children: React.ReactNode }> = ({ icon, title, children }) => (
     <div className="bg-base-200/40 border border-base-300/20 p-6 rounded-xl flex flex-col items-start gap-4 text-left transition-all duration-300 hover:-translate-y-1 glow-on-hover">
         <div className="bg-brand-primary/10 p-3 rounded-lg border border-brand-primary/20">
@@ -19,6 +19,7 @@ const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; children: Re
 
 
 const App: React.FC = () => {
+  <Analytics />
   const [isLoading, setIsLoading] = useState(false);
   const [isGeneratingIdea, setIsGeneratingIdea] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -200,7 +201,7 @@ const App: React.FC = () => {
       </main>
       <SettingsModal isOpen={settingsOpen} onClose={() => setSettingsOpen(false)} />
       <footer className="text-center p-6 mt-12 text-text-secondary text-sm border-t border-base-300/20">
-        <a href="https://github.com/KesavGopan10/AI-Prompt-Artisan" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-brand-accent transition-colors">
+        <a href="" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-brand-accent transition-colors">
             <GitHubIcon className="w-4 h-4" />
             <span>View Project on GitHub</span>
         </a>
