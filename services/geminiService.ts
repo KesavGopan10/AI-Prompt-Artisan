@@ -59,7 +59,7 @@ export const enhancePrompt = async (userInput: string): Promise<EnhancedPrompts>
     try {
         const ai = getGeminiAIInstance();
         const response: GenerateContentResponse = await ai.models.generateContent({
-            model: "gemini-2.5-flash-preview-04-17",
+            model: "gemini-2.0-flash",
             contents: userInput,
             config: {
                 systemInstruction: PROMPT_ENHANCEMENT_SYSTEM_INSTRUCTION,
@@ -117,7 +117,7 @@ export const generateCreativeIdea = async (): Promise<string> => {
     try {
         const ai = getGeminiAIInstance();
         const response: GenerateContentResponse = await ai.models.generateContent({
-            model: "gemini-2.5-flash-preview-04-17",
+            model: "gemini-2.0-flash",
             contents: CREATIVE_IDEA_PROMPT,
         });
         return (response.text ?? '').trim().replace(/"/g, ''); // Clean up quotes
