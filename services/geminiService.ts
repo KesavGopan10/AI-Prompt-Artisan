@@ -101,7 +101,7 @@ export const describeImage = async (base64Image: string): Promise<string> => {
         };
 
         const response: GenerateContentResponse = await ai.models.generateContent({
-            model: "gemini-2.0-flash",
+            model: "gemini-2.5-Pro",
             contents: { parts: [imagePart, textPart] },
         });
         
@@ -117,7 +117,7 @@ export const generateCreativeIdea = async (): Promise<string> => {
     try {
         const ai = getGeminiAIInstance();
         const response: GenerateContentResponse = await ai.models.generateContent({
-            model: "gemini-2.0-flash",
+            model: "gemini-2.5-pro",
             contents: CREATIVE_IDEA_PROMPT,
         });
         return (response.text ?? '').trim().replace(/"/g, ''); // Clean up quotes
