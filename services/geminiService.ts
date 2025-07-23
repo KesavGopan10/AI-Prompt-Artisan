@@ -117,7 +117,7 @@ export const generateCreativeIdea = async (): Promise<string> => {
     try {
         const ai = getGeminiAIInstance();
         const response: GenerateContentResponse = await ai.models.generateContent({
-            model: "gemini-2.5-pro",
+            model: "gemini-2.5-flash",
             contents: CREATIVE_IDEA_PROMPT,
         });
         return (response.text ?? '').trim().replace(/"/g, ''); // Clean up quotes
