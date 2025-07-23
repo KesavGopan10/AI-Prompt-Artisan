@@ -59,7 +59,7 @@ export const enhancePrompt = async (userInput: string): Promise<EnhancedPrompts>
     try {
         const ai = getGeminiAIInstance();
         const response: GenerateContentResponse = await ai.models.generateContent({
-            model: "gemini-2.0-flash",
+            model: "gemini-2.5-flash",
             contents: userInput,
             config: {
                 systemInstruction: PROMPT_ENHANCEMENT_SYSTEM_INSTRUCTION,
