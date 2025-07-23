@@ -101,7 +101,7 @@ export const describeImage = async (base64Image: string): Promise<string> => {
         };
 
         const response: GenerateContentResponse = await ai.models.generateContent({
-            model: "gemini-2.5-Pro",
+            model: "gemini-2.5-flash",
             contents: { parts: [imagePart, textPart] },
         });
         
